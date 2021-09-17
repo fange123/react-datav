@@ -1,0 +1,42 @@
+.sider {
+  position: fixed !important;
+  top: 50px;
+  z-index: 1;
+  height: calc(100vh - 50px) !important;
+  background: #fff !important;
+}
+
+.headerMenu {
+  margin-left: 20px;
+  border-bottom: none;
+  :global {
+    .ant-menu-item.ant-menu-item-active,
+    .ant-menu-item.ant-menu-item-selected,
+    .ant-menu-submenu.ant-menu-submenu-active,
+    .ant-menu-submenu.ant-menu-submenu-selected {
+      color: #fff;
+      & span {
+        color: #fff;
+      }
+    }
+    .ant-menu-item > a:only-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+}
+.activeMenu {
+  top: 0 !important;
+  background-color: #fca7b5 !important;
+  &:hover {
+    background-color: rgb(250, 192, 221) !important;
+  }
+  :global {
+    .ant-menu-submenu-title > a {
+      color: #fff;
+    }
+  }
+}
